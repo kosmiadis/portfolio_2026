@@ -17,7 +17,7 @@ function TriggerTheme () {
 }   
 
 export default function Header () {
-    return <header className="flex justify-between gap-4 items-center py-4 px-8">
+    return <header className="sticky top-0 bg-bg/95 flex justify-between gap-4 items-center py-4 px-8">
         <h2 className="text-foreground font-bold">Vagelis Kosmiadis</h2>
         <div className="flex items-center gap-4">
             <nav>

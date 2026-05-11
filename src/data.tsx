@@ -90,7 +90,7 @@ export const data: DataI = {
         ]
     },
     resume: {
-        title: "Professional Journey",
+        title: "My Resume / CV",
         // Ένα μικρό context για το CV σου
         content: "Combining academic theory from Aristotle University with practical experience in the industry. Focused on building clean, maintainable code and solving real-world problems.",
         skills: {

@@ -21,7 +21,7 @@ export default function Hero () {
 
     const { title, content } = data.hero;
     
-    return <article className="mt-[20%] flex flex-col gap-6">
+    return <article className="min-h-screen mt-[20%] flex flex-col gap-6">
         <h2 className="text-foreground font-mono font-bold text-3xl text-wrap">Hey, I am <span className="text-nowrap text-violet-500">Vagelis Kosmiadis</span></h2>
         <div className="flex flex-col gap-1">
             <h1 className="text-foreground font-semibold italic">{title}</h1>
