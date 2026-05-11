@@ -70,6 +70,7 @@ export interface DataI {
 
 export const data: DataI = {
     header: {
+        
         navbar: {
             links: [
                 { text: "RESUME", to: '#resume' },

@@ -11,7 +11,7 @@ interface ButtonI extends HTMLAttributes<HTMLButtonElement> {
 const variantStyle = {
     default: 'bg-accent text-white hover:brightness-120 hover:shadow-2xl shadow-accent',
     ghost: 'border-1 border-accent text-accent hover:bg-accent hover:text-white',
-    link: 'text-accent dark:hover:text-white'
+    link: 'text-accent hover:text-black dark:hover:text-white p-0'
 }
 
 export default function Button ({ variant='default', children, ...props}: ButtonI) {
