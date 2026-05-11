@@ -6,6 +6,8 @@ import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, 
   SiExpress, SiGraphql, SiFirebase, SiFigma, SiRedux, SiVite, SiJest 
 } from 'react-icons/si';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 interface NavLink {
     text: string;
@@ -16,6 +18,7 @@ interface SocialLink {
     name: string;
     link: string;
     target: string;
+    icon: any;
 }
 
 interface Skill {
@@ -32,7 +35,7 @@ interface SkillsSection {
 interface WorkEntry {
     work_title: string;
     location: string;
-    period: string; // Καλό είναι να υπάρχει και η ημερομηνία
+    period: string; 
     highlights: string[];
 }
 
@@ -82,8 +85,8 @@ export const data: DataI = {
         title: "CS Student @ AUTh | Freelance Full-Stack Developer",
         content: "I am a Computer Science undergraduate at the Aristotle University of Thessaloniki, with a keen interest in Software Engineering and Web Development. Currently in my 2nd semester, I balance my studies with my role as a freelance Full-Stack Developer for a Greek startup, where I build scalable web applications for diverse clients.",
         social: [
-            { name: 'GitHub', link: 'https://github.com/kosmiadis', target: "_blank" },
-            { name: 'LinkedIn', link: 'https://www.linkedin.com/in/βαγγέλης-κοσμιάδης-72a6a9360/', target: "_blank" },
+            { icon: FaGithub,  name: 'GitHub', link: 'https://github.com/kosmiadis', target: "_blank" },
+            { icon: FaLinkedin, name: 'LinkedIn', link: 'https://www.linkedin.com/in/βαγγέλης-κοσμιάδης-72a6a9360/', target: "_blank" },
         ]
     },
     resume: {
