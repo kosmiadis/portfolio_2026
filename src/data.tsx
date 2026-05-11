@@ -32,7 +32,7 @@ interface SkillsSection {
 }
 
 
-interface WorkEntry {
+export interface WorkEntry {
     work_title: string;
     location: string;
     period: string; 
@@ -48,7 +48,11 @@ interface WorkSection {
 export interface DataI {
     header: {
         navbar: {
-            links: NavLink[];
+            links: {
+                resume: NavLink;
+                contact: NavLink;
+                about: NavLink;
+            };
         };
     };
     hero: {
@@ -75,18 +79,20 @@ export const data: DataI = {
     header: {
         
         navbar: {
-            links: [
-                { text: "RESUME", to: '#resume' },
-                { text: "CONTACT", to: '#contact' },
-            ],
+            links: {
+                resume: { text: "RESUME", to: '#resume' },
+                contact: { text: "CONTACT", to: '#contact' },
+                about: { text: "ABOUT", to: '#about' },
+
+            }
         }
     },
     hero: {
         title: "CS Student @ AUTh | Freelance Full-Stack Developer",
         content: "I am a Computer Science undergraduate at the Aristotle University of Thessaloniki, with a keen interest in Software Engineering and Web Development. Currently in my 2nd semester, I balance my studies with my role as a freelance Full-Stack Developer for a Greek startup, where I build scalable web applications for diverse clients.",
         social: [
-            { icon: FaGithub,  name: 'GitHub', link: 'https://github.com/kosmiadis', target: "_blank" },
-            { icon: FaLinkedin, name: 'LinkedIn', link: 'https://www.linkedin.com/in/βαγγέλης-κοσμιάδης-72a6a9360/', target: "_blank" },
+            { icon: <FaGithub />,  name: 'GitHub', link: 'https://github.com/kosmiadis', target: "_blank" },
+            { icon: <FaLinkedin color="#0A66C2" />, name: 'LinkedIn', link: 'https://www.linkedin.com/in/βαγγέλης-κοσμιάδης-72a6a9360/', target: "_blank" },
         ]
     },
     resume: {
@@ -167,7 +173,7 @@ export const data: DataI = {
     },
     contact: {
         title: "Get In Touch",
-        subtitle: "Currently open to freelance projects and networking opportunities.",
+        subtitle: "Currently open to freelance projects and networking opportunities. Send me a message freely at my personal email down below",
         email: "vageliskosmiadis@gmail.com", 
         location: "Thessaloniki, Greece"
     },

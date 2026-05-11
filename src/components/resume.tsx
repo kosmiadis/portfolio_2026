@@ -1,9 +1,10 @@
+
 import { data } from "../data"
 
 export default function Resume () {
     const { title, content, skills } = data.resume;
     
-    return <article className="flex flex-col gap-6">
+    return <article id="resume" className="flex flex-col gap-20">
         <div className="flex flex-col gap-2">
             <h2 className="font-semibold text-2xl">{title}</h2>
             <p>{content}</p>

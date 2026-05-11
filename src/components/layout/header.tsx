@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, type ExoticComponent, type ForwardRefExoticComponent, type ReactNode, type Ref, type RefObject } from "react";
 import { useTheme } from "../../store/theme"
 import { CiLight } from "react-icons/ci";
 import { data } from "../../data";
@@ -16,14 +16,15 @@ function TriggerTheme () {
     </button>
 }   
 
-export default function Header () {
-    return <header className="sticky top-0 bg-bg/95 flex justify-between gap-4 items-center py-4 px-8">
+export default function Header ({ aboutRef, resumeRef, contactRef }: { aboutRef: RefObject<HTMLDivElement | null>, resumeRef: RefObject<HTMLDivElement | null>, contactRef: RefObject<HTMLDivElement | null>}) {
+    const { about, resume, contact }  = data.header.navbar.links;
+    return <header className="sticky z-99 top-0 bg-bg flex justify-between gap-4 items-center py-4 px-4 lg:px-8">
         <h2 className="text-foreground font-bold">Vagelis Kosmiadis</h2>
         <div className="flex items-center gap-4">
-            <nav>
-                <ul className="flex items-center gap-4">
-                    {data.header.navbar.links.map((link) => <li key={link.to}><Button variant="link">{link.text}</Button></li>)}
-                </ul>
+            <nav className="flex items-center gap-4">
+                <Button onClick={() => window.scrollTo({ top: aboutRef!.current!.offsetTop - 80, behavior: 'smooth' })} variant="link">{about.text}</Button>
+                <Button onClick={() => window.scrollTo({ top: resumeRef!.current!.offsetTop - 80, behavior: 'smooth' })} variant="link">{resume.text}</Button>
+                <Button onClick={() => window.scrollTo({ top: contactRef!.current!.offsetTop - 80, behavior: 'smooth' })} variant="link">{contact.text}</Button>
             </nav>
             <TriggerTheme />
         </div>

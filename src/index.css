@@ -11,6 +11,11 @@
     --text-xl: 18px;
     --text-2xl: 20px;
     --default-font-family: "Google Sans Code", monospace;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
