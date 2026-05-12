@@ -1,4 +1,4 @@
-import { useCallback, type ExoticComponent, type ForwardRefExoticComponent, type ReactNode, type Ref, type RefObject } from "react";
+import { useCallback, type RefObject } from "react";
 import { useTheme } from "../../store/theme"
 import { CiLight } from "react-icons/ci";
 import { data } from "../../data";
