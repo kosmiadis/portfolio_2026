@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: crosshair;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

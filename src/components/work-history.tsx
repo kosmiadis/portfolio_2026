@@ -1,7 +1,7 @@
 import { data, type WorkEntry } from "../data"
 
 function WorkHistoryHighlight ({ workHistoryTimelineHighlight }: {workHistoryTimelineHighlight: WorkEntry} ) {
-    const { work_title, location, period, highlights } = workHistoryTimelineHighlight;
+    const { work_title, location, period, highlights, live_demo } = workHistoryTimelineHighlight;
     
     return <div className="border-l border-accent relative">
         <span className="w-4 h-4 bg-violet-500 absolute rounded-full left-[-8.5px] top-1"></span>
@@ -17,6 +17,8 @@ function WorkHistoryHighlight ({ workHistoryTimelineHighlight }: {workHistoryTim
             <ul className="mt-4 flex flex-col gap-2">
                 {highlights.map(highlight => <li>{highlight}</li>)}
             </ul>
+
+            {live_demo && <p className="text-accent mt-2 hover:underline">Live demo at <a href={live_demo} target="group">{live_demo}</a></p>}
         </div>
     </div>
 }

@@ -19,7 +19,7 @@ function TriggerTheme () {
 export default function Header ({ aboutRef, resumeRef, contactRef }: { aboutRef: RefObject<HTMLDivElement | null>, resumeRef: RefObject<HTMLDivElement | null>, contactRef: RefObject<HTMLDivElement | null>}) {
     const { about, resume, contact }  = data.header.navbar.links;
     return <header className="sticky z-99 top-0 bg-bg flex justify-between gap-4 items-center py-4 px-4 lg:px-8">
-        <h2 className="text-foreground font-bold">Vagelis Kosmiadis</h2>
+        <h2 className="text-foreground font-bold hover:cursor-crosshair">Vagelis Kosmiadis</h2>
         <div className="flex items-center gap-4">
             <nav className="flex items-center gap-4">
                 <Button onClick={() => window.scrollTo({ top: aboutRef!.current!.offsetTop - 80, behavior: 'smooth' })} variant="link">{about.text}</Button>

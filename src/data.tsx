@@ -4,7 +4,9 @@ import {
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, 
-  SiExpress, SiGraphql, SiFirebase, SiFigma, SiRedux, SiVite, SiJest 
+  SiExpress, SiRedux, SiVite,
+  SiNetlify,
+  SiVercel
 } from 'react-icons/si';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -36,6 +38,7 @@ export interface WorkEntry {
     work_title: string;
     location: string;
     period: string; 
+    live_demo?: string;
     highlights: string[];
 }
 
@@ -100,7 +103,7 @@ export const data: DataI = {
         // Ένα μικρό context για το CV σου
         content: "Combining academic theory from Aristotle University with practical experience in the industry. Focused on building clean, maintainable code and solving real-world problems.",
         skills: {
-            title: "Technical Expertise",
+            title: "Tools",
             skills_list: [
                 { name: "HTML5", icon: <FaHtml5 color="#E34F26" /> },
                 { name: "CSS3", icon: <FaCss3Alt color="#1572B6" /> },
@@ -114,14 +117,12 @@ export const data: DataI = {
                 { name: "Express", icon: <SiExpress color="#000000" /> },
                 { name: "PostgreSQL", icon: <SiPostgresql color="#4169E1" /> },
                 { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
-                { name: "GraphQL", icon: <SiGraphql color="#E10098" /> },
-                { name: "Firebase", icon: <SiFirebase color="#FFCA28" /> },
                 { name: "Git", icon: <FaGitAlt color="#F05032" /> },
                 { name: "Docker", icon: <FaDocker color="#2496ED" /> },
                 { name: "Vite", icon: <SiVite color="#646CFF" /> },
-                { name: "Jest", icon: <SiJest color="#C21325" /> },
                 { name: "Python", icon: <FaPython color="#3776AB" /> },
-                { name: "Figma", icon: <SiFigma color="#F24E1E" /> }
+                { name: "Vercel", icon: <SiVercel color="#000000" /> },
+                { name: "Netlify", icon: <SiNetlify color="#00C7B7" /> },
             ]
         }
     },
@@ -132,43 +133,23 @@ export const data: DataI = {
             {
                 work_title: "Freelance Full-Stack Developer @ Greek Startup",
                 location: "Thessaloniki (Remote)",
-                period: "2024 - Present",
+                period: "2026 - Present",
                 highlights: [
-                    "Developing responsive web applications using React and Node.js for diverse industry clients.",
-                    "Collaborating with UI/UX designers to translate Figma mockups into functional, pixel-perfect code.",
-                    "Optimizing database queries in PostgreSQL, resulting in a 20% improvement in data retrieval speeds."
+                    "Developing responsive websites using React.js and Next.js for diverse industry clients.",
+                    "Optimizing SEO and website performance while keeping best practices"
                 ]
             },
             {
-                work_title: "Junior Web Developer (Internship/Project-based)",
-                location: "Thessaloniki",
-                period: "2023 - 2024",
+                work_title: "Freelance website creation & Social Media Management for local business",
+                live_demo: 'https://chalk59.gr',
+                location: "Thessaloniki (Remote)",
+                period: "2024",
                 highlights: [
-                    "Assisted in the migration of a legacy PHP codebase to a modern MERN stack architecture.",
-                    "Implemented secure authentication flows using JWT and Firebase Auth.",
-                    "Built and maintained internal administrative dashboards for inventory management."
+                    "Developed a fully responsive website for a local bussiness",
+                    "Created content and managed business's social media accounts bringing over 1 million in traffic"
                 ]
             },
-            {
-                work_title: "Open Source Contributor",
-                location: "GitHub",
-                period: "2023",
-                highlights: [
-                    "Contributed to various JavaScript-based open-source projects, fixing bugs and improving documentation.",
-                    "Collaborated with developers globally through PR reviews and issue tracking.",
-                    "Developed a custom VS Code extension to automate repetitive CSS-in-JS tasks."
-                ]
-            },
-            {
-                work_title: "Independent Freelance Projects",
-                location: "Remote",
-                period: "2022 - 2023",
-                highlights: [
-                    "Delivered 5+ custom landing pages for local small businesses using HTML/CSS and JavaScript.",
-                    "Managed full project lifecycles from initial client requirement gathering to deployment and hosting.",
-                    "Ensured 100% client satisfaction by providing post-launch support and performance optimization."
-                ]
-            }
+            
         ]
     },
     contact: {
