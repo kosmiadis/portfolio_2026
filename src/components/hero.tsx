@@ -20,7 +20,7 @@ export default function Hero () {
     const { title, content } = data.hero;
     
     return <article className="min-h-[60vh] mt-[20%] flex flex-col gap-6">
-        <h2 className=" font-mono font-bold text-3xl text-wrap">Hey, I am <span className="text-nowrap text-violet-500">Vagelis Kosmiadis</span></h2>
+        <h2 className=" font-mono font-bold text-2xl text-wrap">Hey, I am <span className="text-nowrap text-violet-500">Vagelis Kosmiadis</span></h2>
         <div className="flex flex-col gap-1">
             <h1 className=" font-semibold italic">{title}</h1>
             <p className="">{content}</p>
