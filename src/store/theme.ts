@@ -12,6 +12,35 @@ const ThemeStore = create<ThemeI>((set) => ({
     setTheme: (theme: ThemeType) => set((state) => ({ ...state, theme }))
 }))
 
+function storeTheme(theme: ThemeType) {
+    localStorage.setItem('theme', theme);
+}   
+
+function getStoredTheme (): ThemeType | string | null {
+    return localStorage.getItem('theme');
+}
+
 export function useTheme () {
-    return ThemeStore();
+
+    const { setTheme, theme } = ThemeStore();
+
+    function toggleTheme () {
+        const nextThemeState = theme == 'light' ? 'dark' : 'light';
+        setTheme(nextThemeState);
+        storeTheme(nextThemeState);        
+    }
+
+    function loadTheme () {
+        const storedTheme: ThemeType | string | null = getStoredTheme();
+
+        if (storedTheme == 'dark' || storedTheme == 'light') {
+            setTheme(storedTheme);
+        }
+        else {
+            storeTheme('light');
+            setTheme('light');
+        }
+    }
+
+    return { toggleTheme, loadTheme, theme };
 }

@@ -1,15 +1,11 @@
-import { useCallback, type RefObject } from "react";
+import { type RefObject } from "react";
 import { useTheme } from "../../store/theme"
 import { CiLight } from "react-icons/ci";
 import { data } from "../../data";
 import Button from "../ui/button";
 
 function TriggerTheme () {
-    const { setTheme, theme } = useTheme();
-
-    const toggleTheme = useCallback(() => {
-        setTheme(theme == 'dark' ? 'light' : 'dark')
-    }, [theme])
+    const { toggleTheme } = useTheme();
 
     return <button onClick={toggleTheme} className="hover:cursor-pointer appearance-none">
         <CiLight size={28} color={'#4a4e69'}/>

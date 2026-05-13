@@ -20,7 +20,6 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
     const workHistoryRef = useRef<HTMLDivElement | null>(null);
     const contactRef = useRef<HTMLDivElement | null>(null);
 
-
     useEffect(() => {
         animate('.core-layout', {
             opacity: [0, 1],
@@ -41,7 +40,7 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
             observer.unobserve(entry.target); // animate only once
           }
         },
-        { threshold: 0.5 } // trigger when 20% visible
+        { threshold: 0.5 } // trigger when 50% visible
       );
 
       if (aboutRef.current) observer.observe(aboutRef.current);
@@ -62,7 +61,7 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
             observer.unobserve(entry.target); // animate only once
           }
         },
-        { threshold: 0.5 } // trigger when 20% visible
+        { threshold: 0.5 } // trigger when 50% visible
       );
 
       if (resumeRef.current) observer.observe(resumeRef.current);
@@ -83,7 +82,7 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
             observer.unobserve(entry.target); // animate only once
           }
         },
-        { threshold: 0.5 } // trigger when 20% visible
+        { threshold: 0.5 } // trigger when 50% visible
       );
 
       if (contactRef.current) observer.observe(contactRef.current);
@@ -104,7 +103,7 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
             observer.unobserve(entry.target); // animate only once
           }
         },
-        { threshold: 0.5 } // trigger when 20% visible
+        { threshold: 0.5 } // trigger when 50% visible
       );
 
       if (workHistoryRef.current) observer.observe(workHistoryRef.current);
