@@ -131,15 +131,6 @@ export const data: DataI = {
         description: "A track record of building production-ready applications and collaborating with agile teams.",
         work_history: [
             {
-                work_title: "Freelance Full-Stack Developer @ Greek Startup",
-                location: "Thessaloniki (Remote)",
-                period: "2026 - Present",
-                highlights: [
-                    "Developing responsive websites using React.js and Next.js for diverse industry clients.",
-                    "Optimizing SEO and website performance while keeping best practices"
-                ]
-            },
-            {
                 work_title: "Freelance website creation & Social Media Management for local business",
                 live_demo: 'https://chalk59.gr',
                 location: "Thessaloniki (Remote)",
