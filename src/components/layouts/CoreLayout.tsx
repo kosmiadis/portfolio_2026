@@ -8,6 +8,7 @@ import WorkHistory from "../work-history";
 import { useEffect, useRef } from "react";
 import Contact from "../contact";
 import { animate } from "animejs";
+import Projects from "../projects";
 
 type CoreLayoutPropsType = {
     theme: ThemeType;
@@ -19,6 +20,7 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
     const resumeRef = useRef<HTMLDivElement | null>(null);
     const workHistoryRef = useRef<HTMLDivElement | null>(null);
     const contactRef = useRef<HTMLDivElement | null>(null);
+    const projectsRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         animate('.core-layout', {
@@ -111,6 +113,27 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
       return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            animate('.projects', {
+              translateY: [100, 0],
+              opacity: [0, 1],
+              duration: 800,
+              easing: "easeOutExpo",
+            });
+            observer.unobserve(entry.target); // animate only once
+          }
+        },
+        { threshold: 0.5 } // trigger when 50% visible
+      );
+
+      if (workHistoryRef.current) observer.observe(workHistoryRef.current);
+
+      return () => observer.disconnect();
+    }, []);
+
 
     return <div className={twMerge('w-full min-h-screen bg-bg core-layout', theme)}> 
         <Header aboutRef={aboutRef} resumeRef={resumeRef} contactRef={contactRef} />
@@ -128,9 +151,15 @@ export default function CoreLayout ({ theme }: CoreLayoutPropsType) {
                 <WorkHistory />
             </div>
 
+            <div className="projects opacity-0" ref={projectsRef}>
+                <Projects />
+            </div>
+
             <div className="contact opacity-0" ref={contactRef}>
                 <Contact />
             </div>
+
+            
 
         </main>
         <Footer />

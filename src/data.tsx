@@ -49,15 +49,16 @@ interface WorkSection {
 }
 
 
-type ProjectType = {
+export type ProjectType = {
     id: number;
     title: string;
     description: string;
     links: {
-        github: string | null;
-        live_demo?: string | null;
+        github: string;
+        live_demo?: string;
     }
-    image?: string; //path to public folder
+    image?: string; //path to public folder,
+    tools?: { id: number, name: string, icon: ReactNode }[];
 }
 
 interface ProjectsI {
@@ -171,10 +172,13 @@ export const data: DataI = {
             {
                 id: 1,
                 title: "Naive Bayes Email Classification (ML Classification Algorithm)",
-                description: "Hand written from scratch implementation of the Naive Bayes Classification Machine Learning Algorithm in C++. Aims to combine academic knowledge with coding skills.",
+                description: "Hand written from scratch implementation of the Naive Bayes Classification Machine Learning Algorithm in C++ using Bayes Theorem in Probabilities. Aims to combine academic knowledge with coding skills.",
                 links: {
                     github: "https://github.com/kosmiadis/Naive-Bayes-Email-Classification"
                 },
+                tools: [
+                    { id: 1, name: "C++", icon: <SiCplusplus color="#3178C6" /> }
+                ]
             }, 
             {
                 id: 2,
@@ -183,8 +187,13 @@ export const data: DataI = {
                 links: {
                     github: "https://github.com/kosmiadis/Email-Classifier"
                 },
+                tools: [
+                    { id: 1, name: "Next.js", icon: <SiNextdotjs color="#000000" /> },
+                    { id: 2, name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
+                    { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
+                    { id: 4, name: "C++", icon: <SiCplusplus color="#3178C6" /> },
+                ]
             }, 
-
         ], 
     },
     contact: {
