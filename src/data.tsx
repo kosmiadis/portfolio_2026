@@ -6,7 +6,7 @@ import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, 
   SiExpress, SiRedux, SiVite,
   SiNetlify,
-  SiVercel
+  SiVercel, SiCplusplus
 } from 'react-icons/si';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -48,6 +48,23 @@ interface WorkSection {
     work_history: WorkEntry[];
 }
 
+
+type ProjectType = {
+    id: number;
+    title: string;
+    description: string;
+    links: {
+        github: string | null;
+        live_demo?: string | null;
+    }
+    image?: string; //path to public folder
+}
+
+interface ProjectsI {
+    title: string;
+    projectsList: ProjectType[];
+}
+
 export interface DataI {
     header: {
         navbar: {
@@ -74,7 +91,10 @@ export interface DataI {
         email: string;
         location: string;
     };
+
     work: WorkSection;
+
+    projects: ProjectsI;
 }
 
 
@@ -114,6 +134,7 @@ export const data: DataI = {
                 { name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
                 { name: "Redux", icon: <SiRedux color="#764ABC" /> },
                 { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
+                { name: "C++", icon: <SiCplusplus color="#3178C6" /> },
                 { name: "Express", icon: <SiExpress color="#000000" /> },
                 { name: "PostgreSQL", icon: <SiPostgresql color="#4169E1" /> },
                 { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
@@ -123,6 +144,7 @@ export const data: DataI = {
                 { name: "Python", icon: <FaPython color="#3776AB" /> },
                 { name: "Vercel", icon: <SiVercel color="#000000" /> },
                 { name: "Netlify", icon: <SiNetlify color="#00C7B7" /> },
+                
             ]
         }
     },
@@ -142,6 +164,28 @@ export const data: DataI = {
             },
             
         ]
+    },
+    projects: {
+        title: "View some of my Projects",
+        projectsList: [
+            {
+                id: 1,
+                title: "Naive Bayes Email Classification (ML Classification Algorithm)",
+                description: "Hand written from scratch implementation of the Naive Bayes Classification Machine Learning Algorithm in C++. Aims to combine academic knowledge with coding skills.",
+                links: {
+                    github: "https://github.com/kosmiadis/Naive-Bayes-Email-Classification"
+                },
+            }, 
+            {
+                id: 2,
+                title: "Email Classification Web Application (Using Naive Bayes Email Classification Repo)",
+                description: "This projects aim to connect FullStack Web Development with Next.js and Machine Learning code written in C++ and combine them. Using Docker for the infrastructure and running C++ executable via Child Processes in Node.js",
+                links: {
+                    github: "https://github.com/kosmiadis/Email-Classifier"
+                },
+            }, 
+
+        ], 
     },
     contact: {
         title: "Get In Touch",
