@@ -18,10 +18,10 @@ function ProjectPreview ({ project }: {project: ProjectType}) {
         </div>
         <div className="flex flex-col gap-2">
             <p className="underline">Tools used</p>
-            <ul className="flex items-center gap-4">
+            <ul className="flex flex-wrap items-center gap-4">
                 {tools?.map(tool => <li key={tool.id} className="flex items-center gap-2">
                     {tool.icon}
-                    {tool.name}
+                    <span className="flex-nowrap">{tool.name}</span>
                 </li>)}
             </ul>
         </div>
