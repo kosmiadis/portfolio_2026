@@ -179,7 +179,7 @@ export const data: DataI = {
                 tools: [
                     { id: 1, name: "C++", icon: <SiCplusplus color="#3178C6" /> }
                 ]
-            }, 
+            },  
             {
                 id: 2,
                 title: "Email Classification Web Application (Using Naive Bayes Email Classification Repo)",
@@ -192,6 +192,22 @@ export const data: DataI = {
                     { id: 2, name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
                     { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
                     { id: 4, name: "C++", icon: <SiCplusplus color="#3178C6" /> },
+                ]
+            }, 
+            {
+                id: 3,
+                title: "Live Telemetry Vehicle Dashboard via WebSockets and Custom Protocol",
+                description: "Live Telemetry Vehicle Dashboard, built with Next.js and Node.js (WebSockets & Vehicle performance simulation). The application connects to a live data stream via a websocket and displays live performance data and analytis such as live speed, batery temperature, average rpm etc...",
+                links: {
+                    github: "https://github.com/kosmiadis/Live-Telemetry"
+                },
+                tools: [
+                    { id: 1, name: "Next.js", icon: <SiNextdotjs color="#000000" /> },
+                    { id: 2, name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
+                    { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
+                    { id: 4, name: "Node.js", icon: <FaNodeJs color="#339933" />},
+                    { id: 5, name: "PostgreSQL", icon: <SiPostgresql color="#4169E1" /> },
+                    { id: 6, name: "Docker", icon: <FaDocker color="#2496ED" /> },
                 ]
             }, 
         ], 
