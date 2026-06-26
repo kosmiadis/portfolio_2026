@@ -114,7 +114,7 @@ export const data: DataI = {
     },
     hero: {
         title: "CS Student @ AUTh | Freelance Full-Stack Developer",
-        content: "I am a Computer Science undergraduate at the Aristotle University of Thessaloniki, with a keen interest in Software Engineering and Web Development. Currently in my 2nd semester, I balance my studies with my role as a freelance Full-Stack Developer for a Greek startup, where I build scalable web applications for diverse clients.",
+        content: "I am a Computer Science undergraduate at the Aristotle University of Thessaloniki, with a keen interest in Software Engineering and Web Development. Currently in my 2nd semester, I balance my studies with some freelance projects, where I build scalable web applications for diverse clients.",
         social: [
             { icon: <FaGithub />,  name: 'GitHub', link: 'https://github.com/kosmiadis', target: "_blank" },
             { icon: <FaLinkedin color="#0A66C2" />, name: 'LinkedIn', link: 'https://www.linkedin.com/in/βαγγέλης-κοσμιάδης-72a6a9360/', target: "_blank" },
