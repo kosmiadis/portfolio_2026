@@ -6,8 +6,9 @@ import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, 
   SiExpress, SiRedux, SiVite,
   SiNetlify,
-  SiVercel, SiCplusplus
+  SiVercel, SiCplusplus, SiGnubash
 } from 'react-icons/si';
+import { DiVim } from 'react-icons/di';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -145,7 +146,8 @@ export const data: DataI = {
                 { name: "Python", icon: <FaPython color="#3776AB" /> },
                 { name: "Vercel", icon: <SiVercel color="#000000" /> },
                 { name: "Netlify", icon: <SiNetlify color="#00C7B7" /> },
-                
+        	{ name: "Bash", icon: <SiGnubash /> },
+		{ name: "Vim", icon: <DiVim /> },        
             ]
         }
     },
